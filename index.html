@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Helpdesk Ticket Log Entry</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+}
+h2 {
+    color: #1F3864;
+    text-align: center;
+}
+form {
+    width: 340px;
+    margin: auto;
+    background: white;
+    padding: 18px;
+    border: 1px solid #bbb;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+    </style>
+</head>
+<body>
+    <h2>Helpdesk Ticket Log Entry</h2>
+    <form action="result.jsp" method="post">
+        <label>Raised By:</label><br>
+        <input type="text" name="raised_by" required><br><br>
+        
+        <label>Issue Type:</label><br>
+        <select name="issue_type">
+            <option value="Network">Network</option>
+            <option value="Printer">Printer</option>
+            <option value="Software">Software</option>
+            <option value="Hardware">Hardware</option>
+        </select><br><br>
+        
+        <label>Priority:</label><br>
+        <input type="radio" name="priority" value="Low" checked> Low 
+        <input type="radio" name="priority" value="Medium"> Medium 
+        <input type="radio" name="priority" value="High"> High<br><br>
+        
+        <label>Description:</label><br>
+        <textarea name="description" rows="4" cols="30" required></textarea><br><br>
+        
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>
